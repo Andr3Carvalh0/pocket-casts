@@ -111,7 +111,7 @@ android {
         }
 
         debugProd {
-            debuggable true
+            debuggable false
 
             testCoverageEnabled false
             ext.alwaysUpdateBuildId = false
