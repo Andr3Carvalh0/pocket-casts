@@ -110,18 +110,9 @@ fun WearApp(
         onLoggingInScreenShown()
     }
 
-    val userCanAccessWatch = when (subscriptionStatus) {
-        is SubscriptionStatus.Free,
-        null -> false
-        is SubscriptionStatus.Paid -> true
-    }
-
     val waitingForSignIn = remember { mutableStateOf(false) }
-    if (!userCanAccessWatch) {
-        waitingForSignIn.value = true
-    }
 
-    val startDestination = if (userCanAccessWatch) WatchListScreen.route else RequirePlusScreen.route
+    val startDestination = WatchListScreen.route
 
     WearNavScaffold(
         navController = navController,
