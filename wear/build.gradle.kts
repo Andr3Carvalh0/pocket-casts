@@ -26,7 +26,7 @@ android {
         named("debug") {
             applicationIdSuffix = ".debug"
 
-            manifestPlaceholders["appIcon"] = "@mipmap/ic_launcher_radioactive"
+            manifestPlaceholders["appIcon"] = "@mipmap/ic_launcher"
             manifestPlaceholders["sentryDsn"] = ""
         }
 
